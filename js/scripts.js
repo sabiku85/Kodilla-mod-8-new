@@ -1,17 +1,12 @@
-function getTriangleArea(a, h) {
-  if (a <= 0 || h <= 0) {
-    console.log('Nieprawidłowe dane');
-  } else {
-    return (a*h/2);
-  }
-}
+var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
+var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
 
-console.log(getTriangleArea(10,6));
+var allNames = femaleNames.concat(maleNames);
 
-var triangleArea1 = getTriangleArea(5,12),
-	triangleArea2 = getTriangleArea(8,3),
-	triangleArea3 = getTriangleArea(2,9);
+console.log(allNames);
 
-console.log('Pole trójkąta nr 1 = ' + triangleArea1);
-console.log('Pole trójkąta nr 2 = ' + triangleArea2);
-console.log('Pole trójkąta nr 3 = ' + triangleArea3);
+var newName = 'Marian';
+
+allNames.indexOf(newName) === -1 ? allNames.push(newName) : console.log("'newName' znajduje się już w 'allNames'");
+
+console.log(allNames);
