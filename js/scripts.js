@@ -1,12 +1,10 @@
-var femaleNames = ['Asia', 'Kasia', 'Ola', 'Jola'];
-var maleNames = ['Piotrek', 'Marek', 'Arek', 'Jarek'];
+var text = 'Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.',
+	animal = 'Zielone słonie';
 
-var allNames = femaleNames.concat(maleNames);
+animalUpperCased = animal.toUpperCase();
+console.log(animalUpperCased);
 
-console.log(allNames);
+var jednakZieloneSlonie = text.replace('Papugi', animalUpperCased);
+console.log(jednakZieloneSlonie);
 
-var newName = 'Marian';
-
-allNames.indexOf(newName) === -1 ? allNames.push(newName) : console.log("'newName' znajduje się już w 'allNames'");
-
-console.log(allNames);
+console.log(jednakZieloneSlonie.slice(0,jednakZieloneSlonie.length/2));
