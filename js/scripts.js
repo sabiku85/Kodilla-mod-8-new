@@ -1,10 +1,11 @@
-var text = 'Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.',
-	animal = 'Zielone słonie';
+function rysujChoinke(m) {
+	for (var k = 1; k <= m; k++) {
+		var star = "";
+			for (var n = 1; n <= (k*2-1); n++) {
+    			star += "*";
+    		}
+    	console.log(star);
+    }
+}
 
-animalUpperCased = animal.toUpperCase();
-console.log(animalUpperCased);
-
-var jednakZieloneSlonie = text.replace('Papugi', animalUpperCased);
-console.log(jednakZieloneSlonie);
-
-console.log(jednakZieloneSlonie.slice(0,jednakZieloneSlonie.length/2));
+rysujChoinke(8);
