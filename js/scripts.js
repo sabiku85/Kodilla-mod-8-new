@@ -1,5 +1,8 @@
-var buttonClasses = document.getElementsByClassName('button');
+var list = document.getElementById('list'),
+	add = document.getElementById('addElem'),
+	nextNumber = document.getElementsByTagName('li');
+	
 
-for (var k = 0; k < buttonClasses.length; k++) {
-	alert(buttonClasses[k].innerText);
-};
+add.addEventListener('click', function() {
+	list.innerHTML += '<li>item ' + nextNumber.length + '</li>';
+});
