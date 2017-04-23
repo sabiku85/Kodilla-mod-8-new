@@ -1,0 +1,15 @@
+.container {
+	line-height: 50px;
+	padding: 40px;
+}
+
+.btn-primary,
+.btn-warning {
+	margin-right: 50px;
+}
+
+h3 {
+	color: #5CB85C;
+	font-size: 36px;
+	line-height: 80px;
+}

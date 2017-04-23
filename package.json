@@ -1,0 +1,25 @@
+{
+  "name": "sabina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabiku85/module-9-jQuery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabiku85/module-9-jQuery/issues"
+  },
+  "homepage": "https://github.com/sabiku85/module-9-jQuery#readme",
+  "description": ""
+}
