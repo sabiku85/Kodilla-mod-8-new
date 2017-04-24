@@ -35,46 +35,51 @@ pickScissors.addEventListener('click', function() { playerPick('nożyce') });
 
 
 function setGameElements() {
-  switch(gameState) {
-    case 'started':
-        newGameElem.style.display = 'none';
-        pickElem.style.display = 'block';
-        resultsElem.style.display = 'block';
-      break;
-    case 'ended':
-        newGameBtn.innerText = 'Jeszcze raz';
-    case 'winner':
-        newGameBtn.innerText = 'Gra zakończona';
-    case 'notStarted':
-    default:
-        newGameElem.style.display = 'block';
-        pickElem.style.display = 'none';
-        resultsElem.style.display = 'none';
-  }
+    switch(gameState) {
+        case 'started':
+            newGameElem.style.display = 'none';
+            pickElem.style.display = 'block';
+            resultsElem.style.display = 'block';
+          break;
+        case 'ended':
+            newGameBtn.innerText = 'Jeszcze raz?';
+            playerPointsElem.innerHTML = 0;
+            computerPointsElem.innerHTML = 0;
+            playerPickElem.innerHTML = 'Wybór gracza';
+            computerPickElem.innerHTML = 'Wybór komputera';
+            playerResultElem.innerHTML = 'Wynik gracza';
+            computerResultElem.innerHTML = 'Wynik komputera';
+        case 'notStarted':
+        default:
+            newGameElem.style.display = 'block';
+            pickElem.style.display = 'none';
+            resultsElem.style.display = 'none';
+    }
 }
 
 setGameElements();
 
 function newGame() {
-  player.name = prompt('Graczu, wpisz swoje imię', 'Imię gracza');
-  if (player.name) {
-    player.score = computer.score = 0;
-    gameState = 'started';
-    setGameElements();
+    player.name = prompt('Graczu, wpisz swoje imię', 'Imię gracza');
+    if (player.name) {
+        player.score = computer.score = 0;
+        gameState = 'started';
+        setGameElements();
 
     playerNameElem.innerHTML = player.name;
-  }
+    }
 }
 
-function endGame() {
+function endGame() {      
     if(player.score == 10) {
-        gameState = 'winner';
+        alert('Wygrałeś! Zdobyłeś 10 punktów :)');
+        gameState = 'ended';
         setGameElements();
-        alert('Wygrałeś!');
+    
     } else if(computer.score == 10) {
-        gameState = 'winner';
+        alert('Wygrał komputer, nazbierał jako pierwszy 10 punktów.');
+        gameState = 'ended';
         setGameElements();
-        alert('Wygrał komputer');
     }
 }
 
